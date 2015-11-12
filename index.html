@@ -17,29 +17,39 @@
         <p>Our Service is fun and awesome, but you must be 13 years old to join</p>
 
         <div class="container-fluid">
-            <form>
-                <label>Email:</label><br>
-                <input class="form-control" name="email" type="email" placeholder="email address" required>
+            <form name="signupForm" novalidate>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input class="form-control" name="email" type="email" placeholder="email address" required>
+                </div>
 
-                <label>First Name:</label><br>
-                <input class="form-control" name="firstName" type="text" placeholder="your first name" required>
+                <div class="form-group">
+                    <label for="firstName">First Name:</label>
+                    <input class="form-control" name="firstName" type="text" placeholder="your first name" required>
+                </div>
 
-                <label>Last Name:</label><br>
-                <input class="form-control" name="lastName" type="text" placeholder="your last name" required>
+                <div class="form-group">
+                    <label for="lastName">Last Name:</label>
+                    <input class="form-control" name="lastName" type="text" placeholder="your last name" required>
+                </div>
 
-                <label>Birthday:</label><br>
-                <input class="form-control" name="birthday" type="text" placeholder="your birthday" required>
+                <div class="form-group">
+                    <label for="birthday">Birthday:</label>
+                    <input class="form-control" name="birthday" type="text" placeholder="your birthday" required>
+                </div>
 
-                <label>Password:</label><br>
-                <input class="form-control" name="password" type="password" required>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input class="form-control" name="password" type="password" required>
+                </div>
 
-                <label>Confirm Password:</label><br>
-                <input class="form-control" name="confirm" type="password" required>
+                <div class="form-group">
+                    <label for="confirm">Confirm Password:</label>
+                    <input class="form-control" name="confirm" type="password" required>
+                </div>
 
-                <button class="btn btn-primary" type="submit">Submit</button>
-
+                <button ng-disabled="signupForm.$invalid" class="btn btn-primary" type="submit">Submit</button>
             </form>
-
         </div>
 
         <!-- Load app.js -->
