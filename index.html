@@ -47,8 +47,8 @@
 
                 <div class="form-group">
                     <label for="confirm">Confirm Password:</label>
-                    <input ng-model="confirm" class="form-control" name="confirm" type="password" ng-class="{'ng-invalid': confirm !== password, 'ng-valid' confirm === password}" required>
-                    <p ng-if="password !== confirm" class="help-block small">Passwords do not Match</p>
+                    <input ng-model="confirm" class="form-control" name="confirm" type="password" required same-as="password">
+                    <p ng-if="signupForm.confirm.$invalid" class="help-block small">Passwords do not Match</p>
                 </div>
 
                 <button id="reset" class="btn">Reset</button>
