@@ -10,7 +10,7 @@ describe('Email', function() {
 	var email = element(by.model('email'));
 
 	beforeEach(function() {
-		browser.get('http://localhost:8000');
+		browser.get('http://127.0.0.1:8080/');
 	})
 
 	it('should be invalid', function() {
@@ -27,7 +27,7 @@ describe('Email', function() {
 describe('First Name', function() {
 
 	beforeEach(function() {
-		browser.get('http://localhost:8000');
+		browser.get('http://127.0.0.1:8080/');
 	})
 
 	it('should be invalid', function() {
@@ -44,7 +44,7 @@ describe('First Name', function() {
 describe('Last Name', function() {
 
 	beforeEach(function() {
-		browser.get('http://localhost:8000');
+		browser.get('http://127.0.0.1:8080/');
 	})
 
 	it('should be invalid', function() {
@@ -60,7 +60,7 @@ describe('Last Name', function() {
 describe('Birthday', function() {
 
 	beforeEach(function() {
-		browser.get('http://localhost:8000');
+		browser.get('http://127.0.0.1:8080/');
 	})
 
 	it('should be invalid', function() {
@@ -77,7 +77,7 @@ describe('Birthday', function() {
 describe('Password', function() {
 
 	beforeEach(function() {
-		browser.get('http://localhost:8000');
+		browser.get('http://127.0.0.1:8080/');
 	})
 
 	it('should be invalid', function() {
@@ -94,7 +94,7 @@ describe('Password', function() {
 describe('Confirm Password', function() {
 
 	beforeEach(function() {
-		browser.get('http://localhost:8000');
+		browser.get('http://127.0.0.1:8080/');
 	})
 
 	it('should be invalid', function() {
@@ -115,7 +115,7 @@ describe('Submit form', function() {
 	var button = element(by.css('#submit'));
 
 	beforeEach(function() {
-		browser.get('http://localhost:8000');
+		browser.get('http://127.0.0.1:8080/');
 	})
 
 	it('should be invalid if the form is invalid', function() {
