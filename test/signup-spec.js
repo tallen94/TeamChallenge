@@ -7,17 +7,18 @@ var confirm = element(by.model('confirm'));
 
 
 describe('Email', function() {
-	var email = element(by.model('email'));
 
 	beforeEach(function() {
 		browser.get('http://127.0.0.1:8080/');
 	})
 
+	// Invalid if email = 'test'
 	it('should be invalid', function() {
 		email.sendKeys('test');
 		expect(hasClass(email, 'ng-invalid')).toBe(true);
 	})
 
+	// Valid if email is a valid email 'test@gmail.com'
 	it('should be valid', function() {
 		email.sendKeys('test@gmail.com');
 		expect(hasClass(email, 'ng-valid')).toBe(true);
@@ -30,10 +31,12 @@ describe('First Name', function() {
 		browser.get('http://127.0.0.1:8080/');
 	})
 
+	// Invalid if nothing is entered
 	it('should be invalid', function() {
 		expect(hasClass(fName, 'ng-invalid')).toBe(true);
 	})
 
+	// Valid if something is entered
 	it('should be valid', function() {
 		fName.sendKeys('Bob');
 		expect(hasClass(fName, 'ng-valid')).toBe(true);
@@ -46,6 +49,7 @@ describe('Last Name', function() {
 	beforeEach(function() {
 		browser.get('http://127.0.0.1:8080/');
 	})
+
 
 	it('should be invalid', function() {
 		expect(hasClass(lName, 'ng-invalid')).toBe(true);
