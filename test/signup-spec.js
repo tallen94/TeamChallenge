@@ -1,3 +1,8 @@
+// Trevor Allen, Chan Im, John Akers, Jooneil Ahn INFO 343 D
+// 11-17-15
+// Team Challenge
+// Tests for team challenge web page.
+
 var email = element(by.model('email'));
 var fName = element(by.model('firstName'));
 var lName = element(by.model('lastName'));

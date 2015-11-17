@@ -1,3 +1,9 @@
+/*Trevor Allen, Chan Im, John Akers, Jooneil Ahn INFO 343 D
+11-17-15
+Team Challenge
+Styling for the Team Challenge Sign Up page
+*/
+
 input.ng-invalid.ng-touched {
 	border: 2px solid red;
 	background-color: #ffb3b3;
