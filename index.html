@@ -17,45 +17,42 @@
         <p>Our Service is fun and awesome, but you must be 13 years old to join</p>
 
         <div class="container-fluid">
-            <form name="signupForm" novalidate>
+            <form name="signupForm" >
                 <div class="form-group">
                     <label for="email">Email:</label>
-                    <input class="form-control" name="email" type="email" placeholder="email address" required>
-                    <p ng-show = "signupForm.email.$invalid && signupForm.email.$dirty" class="help-block">This is not a valid email address</p>
+                    <input ng-model="email" ng-class="{ 'has-error': signupForm.email.$invalid }" class="form-control" name="email" type="email"  required>
+                    <p ng-if="signupForm.email.$invalid" class="help-block small">Please enter in a valid email.</p>
                 </div>
 
                 <div class="form-group">
                     <label for="firstName">First Name:</label>
-                    <input class="form-control" name="firstName" type="text" placeholder="your first name" required>
-                    
+                    <input ng-model="firstName" class="form-control" name="firstName" type="text" required>
                 </div>
 
                 <div class="form-group">
                     <label for="lastName">Last Name:</label>
-                    <input class="form-control" name="lastName" type="text" placeholder="your last name" required>
-                    
+                    <input ng-model="lastName" class="form-control" name="lastName" type="text" required>
                 </div>
 
                 <div class="form-group">
                     <label for="birthday">Birthday:</label>
-                    <input class="form-control" name="birthday" type="text" placeholder="your birthday" required>
-                   
+                    <input ng-model="birthday" class="form-control" name="birthday" type="date" required>
                 </div>
 
                 <div class="form-group">
                     <label for="password">Password:</label>
-                    <input class="form-control" name="password" type="password" required>
-                    
+                    <input ng-model="password" class="form-control" name="password" type="password"  pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$" required>
+                    <p ng-if="signupForm.password.$invalid" class="help-block small">Please use at least 6 characters with at least one capital letter, one lowercase letter, and one number.</p>
                 </div>
 
                 <div class="form-group">
                     <label for="confirm">Confirm Password:</label>
-                    <input class="form-control" name="confirm" type="password" required>
-                    
+                    <input ng-model="confirm" class="form-control" name="confirm" type="password" required same-as="password">
+                    <p ng-if="signupForm.confirm.$invalid" class="help-block small">Passwords do not Match</p>
                 </div>
 
-                <button ng-disabled="signupForm.$invalid" class="btn btn-primary" type="submit">Submit</button>
-
+                <button id="reset" class="btn">Reset</button>
+                <button id="submit" ng-disabled="signupForm.$invalid" class="btn btn-primary" type="submit">Submit</button>
             </form>
         </div>
 
