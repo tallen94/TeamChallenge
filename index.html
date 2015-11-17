@@ -16,6 +16,10 @@
         <h1>Sign Up</h1>
         <p>Our Service is fun and awesome, but you must be 13 years old to join</p>
 
+    <div class="alert alert-success" ng-show="submit">
+      <strong>Success!</strong> Sign Up form submitted.
+    </div>
+
         <div class="container-fluid">
             <form name="signupForm" >
                 <div class="form-group">
@@ -52,7 +56,7 @@
                 </div>
 
                 <button id="reset" class="btn">Reset</button>
-                <button id="submit" ng-disabled="signupForm.$invalid" class="btn btn-primary" type="submit">Submit</button>
+                <button id="submit" ng-disabled="signupForm.$invalid" ng-click="submit=true" class="btn btn-primary" type="submit">Submit</button>
             </form>
         </div>
 
