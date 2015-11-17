@@ -3,7 +3,7 @@
 angular.module("app", [])
 
 .controller("MainCtrl", ['$scope', function($scope) {
-
+    
 }])
 
 .directive('sameAs', function() {

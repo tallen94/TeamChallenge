@@ -136,7 +136,6 @@ describe('Submit form', function() {
 		confirm.sendKeys('Password1');
 		expect(button.isEnabled()).toBe(true);
 	})
-
 })
 
 var hasClass = function (element, cls) {
