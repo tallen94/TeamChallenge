@@ -141,7 +141,31 @@ describe('Submit form', function() {
 		confirm.sendKeys('Password1');
 		expect(button.isEnabled()).toBe(true);
 	})
+
+	it('should be clear when the reset button is hit', function() {
+		email.sendKeys("test@gmail.com");
+		fName.sendKeys('Bob');
+		lName.sendKeys('Hope');
+		bday.sendKeys('01010001');
+		pswd.sendKeys('Password1');
+		confirm.sendKeys('Password1');
+
+		element(by.css("#reset")).click();
+
+		expect(element(by.name('signupForm')).evaluate('signup'))
+		.toEqual({
+	        email: "",
+	        firstName: "",
+	        lastName: "",
+	        birthday: "",
+	        password: "",
+	        confirm: ""
+	    });
+
+	})
 })
+
+
 
 var hasClass = function (element, cls) {
     return element.getAttribute('class').then(function (classes) {
