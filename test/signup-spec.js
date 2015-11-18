@@ -3,12 +3,12 @@
 // Team Challenge
 // Tests for team challenge web page.
 
-var email = element(by.model('email'));
-var fName = element(by.model('firstName'));
-var lName = element(by.model('lastName'));
-var bday = element(by.model('birthday'));
-var pswd = element(by.model('password'));
-var confirm = element(by.model('confirm'));
+var email = element(by.model('signup.email'));
+var fName = element(by.model('signup.firstName'));
+var lName = element(by.model('signup.lastName'));
+var bday = element(by.model('signup.birthday'));
+var pswd = element(by.model('signup.password'));
+var confirm = element(by.model('signup.confirm'));
 
 
 describe('Email', function() {

@@ -8,7 +8,30 @@
 angular.module("app", [])
 
 .controller("MainCtrl", ['$scope', function($scope) {
-    
+
+    var defaultForm = {
+        email: "",
+        firstName: "",
+        lastName: "",
+        birthday: "",
+        password: "",
+        confirm: ""
+    }
+
+    $scope.signup = defaultForm;
+
+    $scope.reload = function() {
+        $scope.submit = false;
+        $scope.signup.email = "";
+        $scope.signup.firstName = "";
+        $scope.signup.lastName = "";
+        $scope.signup.birthday = "";
+        $scope.signup.password = "";
+        $scope.signup.confirm = "";
+
+        $scope.signupForm.$setUntouched();
+        $scope.signupForm.$setPristine();
+    }
 }])
 
 .directive('sameAs', function() {
